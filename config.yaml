@@ -1,0 +1,41 @@
+schema_version: 3
+campaign:
+  name: "test27"
+  title: "Beethoven 11. Symphonie"
+  description: ""
+  instigator: "297915765"
+  repo_id: 1371412887
+  language: "en"
+  license: "CC-BY-4.0"
+automation:
+  central_repository: "lets-encode/instigation"
+  ref: "main"
+  path: "scripts/coordinator.ts"
+source:
+  kind: "facsimile"
+  images:
+    - "sources/img/01.jpg"
+    - "sources/img/02.jpg"
+  header:
+    title: "Beethoven's 11. Symphonie"
+    composer: "Beethoven's Ghost"
+    publisher: ""
+    date: ""
+  rights_acknowledged: "1"
+pieces:
+  - id: "piece-01"
+    kind: "facsimile"
+    path: "sources/piece-01/score.mei"
+    zones:
+      - { surface: 1, ulx: 0, uly: 0, lrx: 1318, lry: 1160 }
+      - { surface: 2, ulx: 0, uly: 0, lrx: 1315, lry: 1221 }
+    header:
+      title: "Beethoven's 11. Symphonie"
+      composer: "Beethoven's Ghost"
+fragmentation:
+  strategy: "by-piece"
+validation:
+  required_validations: 1
+  pass_threshold: 1
+locking:
+  stale_after_minutes: 120
